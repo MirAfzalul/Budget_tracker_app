@@ -1,5 +1,5 @@
 import React from "react";
-import {TiDelete} from "react-icons/ti";
+import {MdDeleteForever} from "react-icons/md";
 
 
 const ExpenseItem=(props)=>{
@@ -12,7 +12,7 @@ const ExpenseItem=(props)=>{
                 ${props.cost}
                    
                 </span>
-                <TiDelete size="1.5em"></TiDelete> 
+                <MdDeleteForever size="1.5em"></MdDeleteForever> 
             </div>
         </li>
     )
