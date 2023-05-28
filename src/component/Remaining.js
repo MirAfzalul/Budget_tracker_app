@@ -7,9 +7,9 @@ const Remaining=()=>{
     const totalExpense=expenses.reduce((total, item)=>{
         return total=(total+item.cost);
     },0);
-
+    const alertType =totalExpense>budget?'alert-danger':'alert-success';
     return(
-        <div className="alert alert-success">
+        <div className={`alert ${alertType}`}>
             <span>Remaining: ${budget-totalExpense}</span>
             </div>
     )
