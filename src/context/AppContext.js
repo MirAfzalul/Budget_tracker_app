@@ -8,18 +8,25 @@ const AppReducer=(state,action)=>{
             return{
                 ...state,
                 expenses: [...state.expenses, action.payload],
-            }
+            };
+            case "DELETE_EXPENSE":
+                return{
+                    ...state,
+                    expenses: state.expenses.filter(
+                        (expense)=>expense.id!==action.payload
+                    ),
+                };
         default:
             return state;
 
     }
-}
+};
 
 const initialState={
     budget:2000,
     expenses: [
         {id:12,name:"shopping", cost: 40},
-        {id:12,name:"car service", cost: 40},
+        {id:11,name:"car service", cost: 40},
     ],
 };
 

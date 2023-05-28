@@ -9,7 +9,7 @@ const ExpenseList=()=>{
         <React.Fragment key={expenses.id}>
             <ul className="list-group">
                 {expenses.map((expense)=>(
-                    <ExpenseItem name={expense.name} cost={expense.cost}/>
+                    <ExpenseItem id={expense.id}name={expense.name} cost={expense.cost}/>
                 )
 
                 )}
